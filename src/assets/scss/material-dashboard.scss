@@ -1,0 +1,38 @@
+@import "md/variables";
+@import "md/mixins";
+@import "md/shadows";
+
+//plugin css
+@import "md/plugins/_perfect-scrollbar";
+
+// Core CSS
+@import "md/typography";
+@import "md/sidebar-and-main-panel";
+@import "md/buttons";
+@import "md/misc";
+@import "md/layout";
+@import "md/navbars";
+// ========
+// @import "md/inputs";
+// @import "md/fixed-plugin";
+// @import "md/forms";
+// @import "md/alerts";
+// @import "md/tables";
+// @import "md/checkboxes";
+// @import "md/togglebutton";
+// @import "md/ripples";
+// @import "md/pagination";
+// @import "md/pills";
+// @import "md/dialogs";
+
+@import "md/popups";
+@import "md/footers";
+
+// Fancy Stuff
+// @import "md/dropdown";
+// ===========
+@import "md/cards";
+@import "md/tabs";
+@import "md/chartist";
+@import "md/responsive";
+@import "./custom.scss";

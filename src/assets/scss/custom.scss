@@ -1,0 +1,152 @@
+$base-color: #24292c;
+$outline-color: #aaa;
+$font-color: rgba(0, 0, 0, .87);
+@mixin media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+}
+
+.md-layout-item.md-size-50 {
+    min-width: 50%;
+    max-width: 50%;
+    flex: 0 1 50%;
+    @include media("(max-width: 860px)"){
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
+
+body {
+    background-color: white;
+}
+
+.main-panel {
+    > .content {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.custom-username {
+    color: white;
+    margin-left: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.welcoming-text {
+    font-size: 2rem;
+    color: $base-color;
+}
+
+.md-card-status {
+    background: transparent;
+}
+
+.md-layout {
+    .md-layout-item:nth-of-type(2) {
+        .custom-card:first-of-type {
+            .card-content {
+                .card-left-side {
+                    border-right: 1px solid $outline-color;
+                }
+            }
+        }
+    }
+}
+
+.custom-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    min-height: 150px;
+    overflow: unset;
+    border-radius: 2px;
+    border: 1px solid $outline-color;
+    color: $font-color;
+    padding: 20px;
+    
+    > .card-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    > .card-content {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        
+        > .card-left-side {
+            padding-right: 1rem;
+        }
+        
+        > .card-right-side {
+            padding-left: 1rem;
+        }
+    }
+    
+    > .content > .gift-line {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        > .gift {
+            max-width: 20%;
+            max-height: auto;
+        }
+    }
+}
+
+.inventory-circle {
+    width: 100px;
+    height: auto;
+}
+
+.footer-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order {
+    font-size:  2rem;
+    margin: 0;
+    margin-right: 1rem
+}
+
+.default-button {
+    border: 1px solid $base-color;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+}
+
+.v-chartist-container {
+    width: 100%;
+}
+
+.ct-bar {
+    stroke: $outline-color !important;
+    stroke-width: 20px;
+    @include media("(max-width: 640px)"){
+        stroke-width: 10px;
+    }
+}
+
+.empty {
+    stroke: $outline-color;
+    stroke-width: 2px;
+}
+.filled {
+    stroke: $base-color;
+    stroke-width: 2px;
+}
+
+
+
+
